@@ -44,4 +44,3 @@ export const Jogador = connection.define(
   }
 );
 
-// module.exports = Jogador
