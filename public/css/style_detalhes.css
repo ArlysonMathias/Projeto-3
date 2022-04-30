@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Ubutu", sans-serif, Arial;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+ul,
+nav {
+  list-style: none;
+}
+body {
+  background-color: aquamarine;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: red;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+header img {
+  width: 168px;
+  margin: 10px;
+}
+
+header li {
+  margin: 0 15px;
+}
+
+header li a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header li a:hover {
+  color: rgb(4, 4, 0);
+}
+
+nav {
+  display: flex;
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    flex-direction: column;
+  }
+}
+
+section#cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 4rem 0 4rem 0;
+  width: 80%;
+}
+
+section#cards div.card {
+  position: relative;
+  width: 40%;
+  height: 70%;
+  box-shadow: 6px 6px 6px 3px #00000030;
+  padding: 2rem;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  border: 2px solid red;
+  background-color: #fff;
+  border-radius: 20px;
+  text-align: center;
+}
+
+section#cards div.card a {
+  text-decoration: none;
+  color: #01030e;
+}
+
+section#cards div.card img {
+  display: flex;
+  margin: auto;
+  width: 50%;
+  margin-bottom: 3%;
+  margin-top: 3%;
+}
+
+section#cards div.card:hover {
+  transition: 0.2s;
+  transform: scale(1.1);
+  background-color: #dc2e69;
+  box-shadow: 2px 20px 25px #dc2e68;
+}
+
+footer {
+  background-color: #364fca;
+  width: auto;
+  height: 20px;
+  color: #e0f034;
+}
+
+footer p {
+  text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    max-width: 480px;
+  }
+
+  section#cards {
+    display: flex;
+    width: 100%;
+    height: 80%;
+    box-sizing: border-box;
+  }
+
+  section#cards div.card {
+    width: 240px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  footer {
+    display: flex;
+    height: 50px;
+    align-items: center;
+  }
+}
