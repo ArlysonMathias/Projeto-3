@@ -1,0 +1,86 @@
+<section class="modal-overlay" id="overlay">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <h3>Atualizar jogador</h3>
+      <a href="/" id="close-modal-put"><i class="bi bi-x-lg"></i></a>
+    </div>
+
+    <div class="modal-body">
+      <form
+        class="form-modal"
+        action="/update/<%= jogadorPut.id %> "
+        method="post"
+      >
+        <label for="nome"> Nome: </label>
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          value="<%=jogadorPut.nome %>"
+          required
+        />
+
+        <label for="posicao">Posição:</label>
+        <select
+          name="posicao"
+          id="posicao"
+          value="<%= jogadorPut.posicao %>"
+          required
+        >
+          <option value=""></option>
+          <option value="PE">PE</option>
+          <option value="PD">PD</option>
+          <option value="CA">CA</option>
+          <option value="SA">SA</option>
+          <option value="MEI">MEI</option>
+          <option value="MD">MD</option>
+          <option value="ME">ME</option>
+          <option value="MC">MC</option>
+          <option value="VOL">VOL</option>
+          <option value="LE">LE</option>
+          <option value="LD">LD</option>
+          <option value="ZG">ZG</option>
+          <option value="GK">GK</option>
+        </select>
+
+        <label for="pais"> País: </label>
+        <input
+          type="text"
+          name="pais"
+          id="pais"
+          value="<%= jogadorPut.pais %>"
+          required
+        />
+
+        <label for="imagem"> Imagem: </label>
+        <input
+          type="text"
+          name="imagem"
+          id="imagem"
+          value="<%= jogadorPut.imagem %>"
+          required
+        />
+
+        <label for="clube"> Clube Atual: </label>
+        <input
+          type="text"
+          name="clube"
+          id="clube"
+          value="<%= jogadorPut.clube %>"
+          required
+        />
+
+        <label for="clube"> Ger: </label>
+        <input
+          type="text"
+          name="ger"
+          id="ger"
+          value="<%= jogadorPut.ger %>"
+          required
+        />
+
+        <button type="submit">Atualizar</button>
+      </form>
+    </div>
+  </div>
+</section>

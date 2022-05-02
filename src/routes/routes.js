@@ -1,10 +1,21 @@
 import express from "express";
-import Sequelize from "sequelize";
 export const routes = express.Router();
+
+import {
+  getAll,
+  cadastro,
+  create,
+  getByID,
+  update,
+  remove,
+} from "../controllers/JogadorController.js";
+
 // const JogadorController = require("../controllers/JogadorController");
-import {getAll} from "../controllers/JogadorController.js";
-
-
 routes.get("/", getAll);
-
-// module.exports = routes; mesma função linha 2
+//rota cadastro
+routes.get("/cadastro", cadastro);
+//rota que gera o create
+routes.post("/create", create);
+routes.get("/getById/:id/:method", getByID);
+routes.post("/update/:id", update);
+routes.get("/remove/:id", remove);

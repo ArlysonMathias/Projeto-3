@@ -1,99 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style_cadastro.css">
-    <title>Cadastro</title>
-</head>
-<body>
+  <head>
+    <%- include('./components/head.ejs') %> 
+  </head>
+  <body>
     <header>
-        <img src="./assets/img/logo-copa-mobile.png" alt="este é o logo" />
-
-        <nav>
-          <li><a href="/">Home</a></li>
-          <li><a href="cadastro.ejs">Cadastrar Jogador</a></li>
-        </nav>
+     <%- include('./components/nav.ejs') %> 
     </header>
 
     <main>
-        <section id="cadastro">
-            <div>
+      <section id="cadastro">
+        <div>
+          <h2>Cadastre um novo jogador</h2>
 
-                <% if (jogador == undefined){ %>
-                <h2>Cadastre um novo jogador</h2>
+          <form action="/create" method="post">
 
-                <form action="./add" method="post">
-                    
-                    <label for="nome"> Nome: </label>
-                    <input type="text" id="nome" name="nome" >
-                    
-                    <label for="posicao"> Posição: </label>
-                    <input type="text" id="posicao" name="posicao" >
+            <label for="nome"> Nome: </label>
+            <input type="text" id="nome" name="nome" required />
 
-                    <label for="pais"> País: </label>
-                    <input type="text" name="pais" id="pais">
-                    
-                    <label for="camisa"> Nº da camisa: </label>
-                    <input type="text" name="camisa" id="camisa">
+          <label for="posicao">Posição:</label >
+            <select name="posicao" id="posicao" required >
+              <option value=""></option>
+              <option value="PE">PE</option>
+              <option value="PD">PD</option>
+              <option value="CA">CA</option>
+              <option value="SA">SA</option>
+              <option value="MEI">MEI</option>
+              <option value="MD">MD</option>
+              <option value="ME">ME</option>
+              <option value="MC">MC</option>
+              <option value="VOL">VOL</option>
+              <option value="LE">LE</option>
+              <option value="LD">LD</option>
+              <option value="ZG">ZG</option>
+              <option value="GK">GK</option>
 
-                    
-                    <label for="imagem"> Imagem: </label>
-                    <input type="text" name="imagem" id="imagem">
+            </select>
 
-                    
-                    <label for="clube"> Clube Atual: </label>
-                    <input type="text" name="clube" id="clube">
+            <label for="pais"> País: </label>
+            <input type="text" name="pais" id="pais" required/>
 
-                    
-                    <label for="clube"> Ger: </label>
-                    <input type="text" name="ger" id="ger">
+            <label for="imagem"> Imagem: </label>
+            <input type="text" name="imagem" id="imagem" required/>
 
-                    <button id="btnCadastrar" typ   e="submit">Cadastrar</button>
+            <label for="clube"> Clube Atual: </label>
+            <input type="text" name="clube" id="clube" required/>
 
-                </form>
-            <%  }else {  %>
-                <h2>Atualize o jogador</h2>
+            <label for="clube"> Ger: </label>
+            <input type="text" name="ger" id="ger" required/>
 
-                <form action="./update/:id" method="post">
-                    
-                    <label for="nome"> Nome: </label>
-                    <input type="text" id="nome" name="nome" >
-                    
-                    <label for="posicao"> Posição: </label>
-                    <input type="text" id="posicao" name="posicao" >
-
-                    <label for="pais"> País: </label>
-                    <input type="text" name="pais" id="pais">
-                    
-                    <label for="camisa"> Nº da camisa: </label>
-                    <input type="text" name="camisa" id="camisa">
-
-                    
-                    <label for="imagem"> Imagem: </label>
-                    <input type="text" name="imagem" id="imagem">
-
-                    
-                    <label for="clube"> Clube Atual: </label>
-                    <input type="text" name="clube" id="clube">
-
-                    
-                    <label for="clube"> Ger: </label>
-                    <input type="text" name="ger" id="ger">
-
-                    <button id="btnAtualizar" type="submit">Atualizar</button>
-
-                </form>
-            <% } %> 
-            </div>
-        </section>
-        
+            <button id="btnCadastrar" typ e="submit">Cadastrar</button>
+          </form>
+        </div>
+      </section>
     </main>
 
-    <footer>
-        <p>Desenvolvido por A.Mathias para fins educativos.</p>
-      </footer>
-    
-</body>
+    <%- include('./components/footer.ejs') %> 
+  </body>
 </html>

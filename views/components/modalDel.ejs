@@ -1,0 +1,16 @@
+<section class="modal-overlay" id="overlay">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <h3>Remover jogador</h3>
+      <a href="/" id="close-modal-put"><i class="bi bi-x-lg"></i></a>
+    </div>
+
+    <div class="modal-body">
+      <p>Tem certeza que deseja excluir <%=jogadorDel.nome%> ?</p>
+      <div id="btn-del">
+        <a id="no" href="/">Não</a>
+        <a id="yes" href="/remove/<%=jogadorDel.id%> ">Sim</a>
+      </div>
+    </div>
+  </div>
+</section>
