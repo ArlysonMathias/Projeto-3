@@ -1,17 +1,17 @@
-#Catálogo de Jogadores da Copa do mundo 2022
+# Catálogo de Jogadores da Copa do mundo 2022
 Projeto final do 2º Módulo curso FullStack - BlueEdtech
 
-##Descrição
+## Descrição
 
 Este projeto foi desenvolvido por Arlyson Mathias, para fins educacionais a pedido da <a href="https://blueedtech.com.br"> BlueEdtech</a>.
 Este projeto tem uma temática sobre a copa do mundo da fifa que será realizada no ano de 2022, possuindo um catálogo onde é possivel conferir alguns do jogadores que defenderão suas respectivas seleções, além de editar, apagar, ou cadastrar um novo jogador.
 
-##Stacks
+## Stacks
 As ferramentas usadas neste projeto são:
 
-<div style="display:flex">
-    <img src="https://img.icons8.com/ios/50/000000/html.png"/>
-    <img src="https://img.icons8.com/ios/50/000000/css.png"/>
+<div style="display:flex"> 
+    <img src="https://i.ibb.co/n7k4WBf/file-type-html-icon-130541.png"/>
+    <img src="https://i.ibb.co/h9Skz73/file-type-css-icon-130661.png"/>
     <img src="https://img.icons8.com/color/48/000000/visual-studio--v1.png"/>
     <img src="https://img.icons8.com/color/48/000000/javascript--v1.png"/>
     <img src="https://img.icons8.com/color/48/000000/nodejs.png"/>
