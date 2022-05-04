@@ -8,6 +8,8 @@ import {
   getByID,
   update,
   remove,
+  detalhes,
+  searchByName,
 } from "../controllers/JogadorController.js";
 
 // const JogadorController = require("../controllers/JogadorController");
@@ -19,3 +21,5 @@ routes.post("/create", create);
 routes.get("/getById/:id/:method", getByID);
 routes.post("/update/:id", update);
 routes.get("/remove/:id", remove);
+routes.get("/detalhes/:id", detalhes);
+routes.post("/search", searchByName);

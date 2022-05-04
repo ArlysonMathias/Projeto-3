@@ -11,8 +11,14 @@
     <main>
       <section id="cadastro">
         <div>
+
+          <% if(message != ""){ %>   
+            <%- include('./components/alert.ejs')  %> 
+          <% } %> 
+
           <h2>Cadastre um novo jogador</h2>
 
+         
           <form action="/create" method="post">
 
             <label for="nome"> Nome: </label>
@@ -56,5 +62,8 @@
     </main>
 
     <%- include('./components/footer.ejs') %> 
+
+
+    <script src="/script.js"></script>
   </body>
 </html>

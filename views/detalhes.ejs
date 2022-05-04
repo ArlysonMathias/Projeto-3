@@ -1,36 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style_detalhes.css">
-    <title>Detalhes</title>
+  <%- include('./components/head.ejs') %>
 </head>
 <body>
-    <header>
-        <img src="/assets/img/logo-copa-mobile.png" alt="este é o logo" />
-  
-        <nav>
-          <li><a href="/">Home</a></li>
-          <li><a href="./cadastro">Cadastrar Jogador</a></li>
-        </nav>
-      </header>
+  <header>
+    <%- include('./components/nav.ejs') %>
+   
+  </header>
 
       <main>
           <section id="cards">
             <div class="card">
-              <p class="id">ID: <%=jogador.id%></p>
+              
               <p class="posicao">Posição: <%=jogador.posicao %></p>
               <img src="<%=jogador.imagem%> " alt="Esta é uma imagem do jogador" />
               <h3>Nome: <%=jogador.nome%></h3>
               <p class="pais">País: <%=jogador.pais%></p>
-              <p class="camisa">Nº da camisa: <%=jogador.camisa %>  </p>
               <p class="clube"> Clube Atual: <%=jogador.clube  %>  </p>
               <p class="ger"> Ger: <%=jogador.ger %>  </p>
-
-              <button id="btnEditar"> Editar </button>
-              <button id="btnDeletar"> Deletar</button>
+          
 
             </div>
 
@@ -39,7 +28,7 @@
 
 
       <footer>
-        <p>Desenvolvido por A.Mathias para fins educativos.</p>
+        <%- include('./components/footer.ejs') %>
       </footer>
 </body>
 </html>

@@ -4,36 +4,87 @@
     <%- include('./components/head.ejs') %>
   </head>
   <body>
-    <header><%- include('./components/nav.ejs') %></header>
+    <header>
+      <%- include('./components/nav.ejs') %>
+
+
+      <% if(message != ""){ %> 
+        <%- include('./components/alert.ejs') %> 
+      <% } %>
+      
+    </header>
 
     <main>
       <section id="cards">
         <% copaMundo.forEach((jogador) => { %>
         <div class="card">
-          <!-- <p class="id">ID: <%=jogador.id %></p> -->
+
+          <div class="dropdown">
+            <div class="dropdown-button">
+              <i class="bi bi-list"></i>
+            </div>
+
+            <div class="dropdown-content">
+
+              <a id="editar" href="/getById/<%= jogador.id %>/put">Editar</a>
+              <a id="apagar" href="/getById/<%= jogador.id %>/delete"> Apagar</a>
+              <a id="detalhes" href="/detalhes/<%=jogador.id %> "> Detalhes</a>
+
+            </div>
+          </div>
+          
+
           <p class="posicao">Posição: <%=jogador.posicao %></p>
           <img src="<%=jogador.imagem %>" alt="Esta é uma imagem do jogador" />
           <h3>Nome: <%=jogador.nome%></h3>
           <p class="pais">País: <%=jogador.pais%></p>
-
-     
-          <a id="editar" href="/getById/<%= jogador.id %>/put">Editar</a>
-          <a id="apagar" href="/getById/<%= jogador.id %>/delete"> Apagar</a>
+         
         </div>
 
         <% }); %>
       </section>
-    </main>
 
-    <% if(jogadorPut != null){ %>
-       <%- include('./components/modalPut.ejs') %>
-    <%} %>
 
-    <% if(jogadorDel != null){ %> 
-      <%- include('./components/modalDel.ejs')  %> 
+    <% if(jogadorSearch.leght != 0){ %>   
+      <section id="cards">
+        <% jogadorSearch.forEach((jogador) => { %>
+        <div class="card">
+
+          <div class="dropdown">
+            <div class="dropdown-button">
+              <i class="bi bi-list"></i>
+            </div>
+
+            <div class="dropdown-content">
+
+              <a id="editar" href="/getById/<%= jogador.id %>/put">Editar</a>
+              <a id="apagar" href="/getById/<%= jogador.id %>/delete"> Apagar</a>
+              <a id="detalhes" href="/detalhes/<%=jogador.id %> "> Detalhes</a>
+
+            </div>
+          </div>
+          
+
+          <p class="posicao">Posição: <%=jogador.posicao %></p>
+          <img src="<%=jogador.imagem %>" alt="Esta é uma imagem do jogador" />
+          <h3>Nome: <%=jogador.nome%></h3>
+          <p class="pais">País: <%=jogador.pais%></p>
+         
+        </div>
+
+        <% }); %>
+      </section>
     <% } %> 
 
-    %> <%- include('./components/footer.ejs') %>
+    </main>
+
+    <% if(jogadorPut != null){ %> <%- include('./components/modalPut.ejs') %>
+    <%} %> <% if(jogadorDel != null){ %> <%-
+    include('./components/modalDel.ejs') %> <% } %>
+
+    <!-- Footer -->
+    <%- include('./components/footer.ejs') %>
+
+    <script src="/script.js"></script>
   </body>
 </html>
-

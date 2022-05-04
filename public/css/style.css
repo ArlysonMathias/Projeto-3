@@ -6,6 +6,8 @@
   font-family: "Ubutu", sans-serif, Arial;
   font-size: 100%;
   box-sizing: border-box;
+
+  user-select: none;
 }
 
 ul,
@@ -33,7 +35,9 @@ header img {
 }
 
 header li {
+  display: flex;
   margin: 0 15px;
+ 
 }
 
 header li a {
@@ -92,47 +96,6 @@ section#cards div.card:hover {
   box-shadow: 2px 20px 25px #dc2e68;
 }
 
-section#cards div.card a#editar {
-  padding: 0.3rem;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  font-size: 1rem;
-  background-color: #dc2e68;
-  border: solid 1px #ff0000;
-  border-radius: 10px;
-  color: aquamarine;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  text-decoration: none;
-  margin-top: 2rem;
-}
-
-section#cards div.card a#apagar {
-  padding: 0.3rem;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  font-size: 1rem;
-  border-radius: 10px;
-  background-color: #dc2e68;
-  border: solid 1px #ff0000;
-  color: aquamarine;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  text-decoration: none;
-  margin-top: 1rem;
-}
-
-section#cards div.card a#apagar:hover {
-  background-color: aquamarine;
-  color: #dc2e68;
-}
-
-section#cards div.card a#editar:hover {
-  background-color: aquamarine;
-  color: #dc2e68;
-}
 
 /* Personalização do form Cadastro */
 
@@ -306,33 +269,139 @@ div#btn-del{
   margin: 0 auto;
 }
 
-div#btn-del a{
-  text-decoration: none;
-  padding: 1.5rem;
-  width: 100%;
-  margin: 2rem 1rem 1rem;
-  border-radius: 10px;
-  color: #dc2e68;
-  background-color: aquamarine;
-  border: solid 1px red
 
+div#btn-del a{
+  padding: 0.8rem;
+  text-decoration: none;
+  width: 100%;
+  margin: 15px 10px ;
+  border-radius: 8px;
 }
 
-/* div#btn-del a#no{
- 
-  color: #dc2e68;
-  background-color: aquamarine;
-  border: solid 1px red
-} */
-
-div#btn-del a:hover{
- 
-  color: aquamarine;
-  background-color: #dc2e68;
+div#btn-del a#no{
+  background-color: #fff;
+  border: solid 1px rgb(187, 184, 184);
   transition: 0.3s ease-in-out;
+  color: #5ea366;
+ 
+}
+
+div#btn-del a#no:hover{
+  background-color: #5ea366;
+  color: #fff;
+}
+
+div#btn-del a#yes{
+  background-color: #fff;
+  border: solid 1px rgb(187, 184, 184);
+  transition: 0.3s ease-in-out;
+  color: red;
+}
+
+div#btn-del a#yes:hover{
+  background-color: red;
+  color: #fff;
+}
+
+
+
+
+/* Alerts */
+
+.message{
+  position: absolute;
+  margin: 0 auto;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  padding: 1.5rem;
+  font-weight: 700;
+  border-radius: 4px;
+  background-color: #c0ffba;
+  color: #007a0a;
+  font-size: 1rem;
+}
+
+.message i{
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+
+/* Dropdown */
+
+.dropdown{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dropdown-button{
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+.dropdown-button:hover{
+  box-shadow: 0px 10px 10px 0 #00000015;
+}
+
+.dropdown-content{
+  display: none;
+  position: absolute;
+  width: 30%;
+  margin-top: 1.8rem;
+  overflow: auto;
+  background-color: #fff;
+}
+
+.dropdown-content a{
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  transition: all .2s ease-in-out;
+  color: black;
+}
+
+.dropdown-content a:hover{
+  background-color: #dc2e68;
+  color: #fff;
+}
+
+/* Search */
+.search{
+  padding-right: 20px;
+  display: flex;
   
 }
 
+.search input{
+  outline: none;
+  border-radius: 5px;
+  width:15rem;
+  border: 1px solid #747474;
+  font-size: 1rem;
+  margin-left: 2rem;
+  padding: 0.3rem;
+}
+
+.search button{
+  padding: 0.3rem;
+  border: 1px solid #747474;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #747474;
+  color: #fff;
+
+}
+
+.search button:hover{
+  background-color: #fff;
+  color: #747474;
+}
 
 
 
@@ -342,6 +411,21 @@ div#btn-del a:hover{
   * {
     box-sizing: border-box;
   }
+
+  header{
+    
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+
+  header img{
+    width: 50%;
+  }
+  .search form{
+    display:none ;
+ }
+  
   footer {
     display: flex;
     height: 50px;
@@ -352,5 +436,8 @@ div#btn-del a:hover{
 @media screen and (max-width: 700px) {
   header {
     flex-direction: column;
+    width: 100%;
+
   }
+ 
 }
