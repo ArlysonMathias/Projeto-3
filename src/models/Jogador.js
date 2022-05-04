@@ -1,6 +1,5 @@
 import Sequelize from "sequelize";
-import { connection } from "../database/db.js"
-
+import { connection } from "../database/db.js";
 
 export const Jogador = connection.define(
   "jogador",
@@ -44,3 +43,8 @@ export const Jogador = connection.define(
   }
 );
 
+const initTable = async () => {
+  await Jogador.sync();
+};
+
+initTable();
