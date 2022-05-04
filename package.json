@@ -1,7 +1,7 @@
 {
   "name": "projeto-3",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projeto do 2º módulo do curso FullStack da BlueEdtech. ",
   "main": "index.js",
   "engines": {
     "node": "14.x"
@@ -12,7 +12,7 @@
     "start": "node index",
     "dev": "nodemon index"
   },
-  "author": "",
+  "author": "Arlyson Mathias",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.15"
