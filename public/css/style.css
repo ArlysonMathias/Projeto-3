@@ -360,7 +360,7 @@ div#btn-del a#yes:hover{
   text-decoration: none;
   display: flex;
   justify-content: flex-end;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 0.5rem;
   transition: all .2s ease-in-out;
   color: black;
@@ -425,6 +425,8 @@ div#btn-del a#yes:hover{
   .search form{
     display:none ;
  }
+
+
   
   footer {
     display: flex;
