@@ -15,13 +15,13 @@ nav {
   list-style: none;
 }
 body {
-  background-color: #F5385F;
+  background-color: #A80527;
   min-height: 100vh;
 }
 
 /* Header */
 header {
-  background-color: #38F557;
+  background-color: #16A82E;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -41,9 +41,11 @@ header li {
 }
 
 header li a {
-  color: #040400;
+  color: #A80527;
   text-decoration: none;
   cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
 header li a:hover {
@@ -70,15 +72,23 @@ section#cards div.card {
   padding: 2rem;
   margin-left: 2rem;
   margin-bottom: 2rem;
-  border: 2px solid red;
-  background-color: #38F557;
+  border: 3px outset #dc2e68;
+  background-color: #16A82E;
   border-radius: 20px;
   text-align: center;
+}
+
+section#cards div.card h3{
+  font-size: 1.1rem;
+  color: #A80527;
+  font-weight:800;
 }
 
 section#cards div.card p{
   font-size: 1.1rem;
   margin-top: 10px;
+  color: #A80527;
+  font-weight:800;
 }
 
 section#cards div.card a {
@@ -108,6 +118,7 @@ section#cadastro form {
   width: 50%;
   display: block;
   margin: 0 auto;
+  
 }
 section#cadastro h2 {
   margin: 20px 0 10px 0;
@@ -121,7 +132,15 @@ section#cadastro form input {
   padding: 0.5rem;
   margin-bottom: 10px;
   margin-top: 5px;
+  border-radius: 10px;
+  outline: none;
 }
+
+section#cadastro form label{
+  color: #fff;
+}
+
+
 
 section#cadastro select {
   width: 100%;
@@ -131,26 +150,30 @@ section#cadastro select {
   text-align: center;
   background-color: #fff;
   color: red;
+  border-radius: 10px;
+  
 }
 
 section#cadastro button {
   display: flex;
   margin: auto;
   padding: 1rem;
-  border-radius: 1.5rem;
+  border-radius: 10px;
   color: black;
   font-size: 1rem;
   margin-top: 10px;
-  background-color: #F5385F;
-  color: #38F557;
+  border: outset 3px #fff;
+  background-color: #A80527;
+  color: #fff;
   margin-bottom: 10px;
 }
 
 section#cadastro button:hover {
-  transform: scale(1.1);
-  transition: 0.3s;
-  background-color: #38F557;
-  color: #F5385F;
+ 
+  transition: 0.7s ease-in-out;
+  background-color: #16A82E;
+  color: #fff ;
+ 
 }
 
 /* ================================ */
@@ -159,12 +182,13 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #38F557;
+  background-color: #16A82E;
   width: auto;
   color: #A80527;
   position: relative;
   padding: 30px;
   box-sizing: border-box;
+  font-weight: 700  ;
 }
 
 footer p {
@@ -205,6 +229,14 @@ footer p {
   justify-content: space-between;
   background-color: aquamarine;
   padding: 1rem;
+  
+}
+
+.modal-header h3{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto  ;
+  
 }
 
 .modal-header a#close-modal-put {
@@ -229,6 +261,8 @@ footer p {
 .form-modal input {
   width: 100%;
   margin: 5px 0;
+  outline: none;
+ 
 }
 .form-modal select {
   width: 100%;
@@ -237,6 +271,7 @@ footer p {
 .form-modal label {
   color: rgb(111, 111, 111);
   padding-top: 0.5rem;
+  
 }
 
 .form-modal button {
@@ -244,12 +279,11 @@ footer p {
   margin: auto;
   padding: 1rem;
   border-radius: 1.5rem;
-  background-color: #fff;
-  color: black;
+  color: black; 
   font-size: 1rem;
   margin-top: 10px;
-  background-color: #F5385F;
-  color: #38F557;
+  background-color: gray;
+  color:  aquamarine;
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -257,8 +291,8 @@ footer p {
 .form-modal button:hover {
   transform: scale(1.1);
   transition: 0.3s;
-  background-color: #38F557;
-  color: #F5385F;
+  background-color: aquamarine;
+  color: gray;
 }
 
 /* Modal Delete */
@@ -398,14 +432,13 @@ div#btn-del a#yes:hover{
   border: 1px solid #747474;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #747474;
-  color: #fff;
-
+  background-color: #fff;
+  color: #16A82E;
 }
 
 .search button:hover{
-  background-color: #fff;
-  color: #747474;
+  background-color: #54FF71;
+  color: #fff;
 }
 
 
