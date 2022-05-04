@@ -15,13 +15,13 @@ nav {
   list-style: none;
 }
 body {
-  background-color: aquamarine;
+  background-color: #F5385F;
   min-height: 100vh;
 }
 
 /* Header */
 header {
-  background-color: #dc2e68;
+  background-color: #38F557;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -41,13 +41,13 @@ header li {
 }
 
 header li a {
-  color: #fff;
+  color: #040400;
   text-decoration: none;
   cursor: pointer;
 }
 
 header li a:hover {
-  color: rgb(4, 4, 0);
+  color: #fff;
 }
 
 nav {
@@ -71,9 +71,14 @@ section#cards div.card {
   margin-left: 2rem;
   margin-bottom: 2rem;
   border: 2px solid red;
-  background-color: aquamarine;
+  background-color: #38F557;
   border-radius: 20px;
   text-align: center;
+}
+
+section#cards div.card p{
+  font-size: 1.1rem;
+  margin-top: 10px;
 }
 
 section#cards div.card a {
@@ -92,8 +97,8 @@ section#cards div.card img {
 section#cards div.card:hover {
   transition: 0.2s;
   transform: scale(1.08);
-  background-color: #dc2e69;
-  box-shadow: 2px 20px 25px #dc2e68;
+  background-color: #fff;
+  box-shadow: 2px 20px 25px #F5385F;
 }
 
 
@@ -108,6 +113,7 @@ section#cadastro h2 {
   margin: 20px 0 10px 0;
   display: flex;
   justify-content: center;
+  color: #fff;
 }
 
 section#cadastro form input {
@@ -132,20 +138,19 @@ section#cadastro button {
   margin: auto;
   padding: 1rem;
   border-radius: 1.5rem;
-  background-color: #fff;
   color: black;
   font-size: 1rem;
   margin-top: 10px;
-  background-color: #dc2e68;
-  color: aquamarine;
+  background-color: #F5385F;
+  color: #38F557;
   margin-bottom: 10px;
 }
 
 section#cadastro button:hover {
   transform: scale(1.1);
   transition: 0.3s;
-  background-color: black;
-  color: #e0f034;
+  background-color: #38F557;
+  color: #F5385F;
 }
 
 /* ================================ */
@@ -154,9 +159,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #dc2e68;
+  background-color: #38F557;
   width: auto;
-  color: aquamarine;
+  color: #A80527;
   position: relative;
   padding: 30px;
   box-sizing: border-box;
@@ -243,8 +248,8 @@ footer p {
   color: black;
   font-size: 1rem;
   margin-top: 10px;
-  background-color: #dc2e68;
-  color: #7fffd4;
+  background-color: #F5385F;
+  color: #38F557;
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -252,8 +257,8 @@ footer p {
 .form-modal button:hover {
   transform: scale(1.1);
   transition: 0.3s;
-  background-color: black;
-  color: #e0f034;
+  background-color: #38F557;
+  color: #F5385F;
 }
 
 /* Modal Delete */
