@@ -96,6 +96,7 @@ section#cards div.card p {
   margin-top: 10px;
   color: #ffdf00;
   font-weight: 800;
+
 }
 
 section#cards div.card a {
@@ -106,9 +107,10 @@ section#cards div.card a {
 section#cards div.card img {
   display: flex;
   margin: auto;
-  width: 50%;
+   height: 60%;
   margin-bottom: 3%;
   margin-top: 3%;
+ 
 }
 
 section#cards div.card:hover {
