@@ -1,9 +1,17 @@
 <img src="/assets/img/logo-copa-mobile.png" alt="este é o logo" />
 
-<nav>
-  <li><a href="/">Home</a></li>
-  <li><a href="/cadastro">Cadastrar Jogador</a></li>
+<nav id="dropdown-header">
+  
+  <ul id="dropdown-menu">
+    <div class="dropdown-menu-icon">
+      <i class="bi bi-list"></i>
+    </div>
+
+    <div class="dropdown-menu-content">
+      <li><a href="/">Home</a></li>
+      <li><a href="/cadastro">Cadastrar Jogador</a></li>
+    </div>
+  </ul>
 
   <div><%- include("./search.ejs") %></div>
 </nav>
-

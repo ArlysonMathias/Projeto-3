@@ -3,6 +3,8 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
+// config para subir deploy
+
 export const connection = new Sequelize(process.env.DATABASE_URL, {
   dialect: "postgres",
   dialectOptions: {
@@ -12,3 +14,18 @@ export const connection = new Sequelize(process.env.DATABASE_URL, {
     },
   },
 });
+
+
+//config para rodar localmente
+
+
+// export const connection = new Sequelize(
+//   process.env.DB_BASE,
+//   process.env.DB_USER,
+//   process.env.DB_PASS,
+//   {
+//     host: process.env.DB_HOST,
+//     port: 5432,
+//     dialect: "postgres",
+//   }
+// );
