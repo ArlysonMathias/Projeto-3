@@ -72,6 +72,7 @@ section#cards {
 }
 
 section#cards div.card {
+  box-sizing: border-box;
   position: relative;
   width: 300px;
   height: 500px;
@@ -86,17 +87,16 @@ section#cards div.card {
 }
 
 section#cards div.card h3 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #ffdf00;
   font-weight: 800;
 }
 
 section#cards div.card p {
-  font-size: 1.1rem;
-  margin-top: 10px;
+  font-size: 1rem;
+  margin-top: 5px;
   color: #ffdf00;
   font-weight: 800;
-
 }
 
 section#cards div.card a {
@@ -107,10 +107,9 @@ section#cards div.card a {
 section#cards div.card img {
   display: flex;
   margin: auto;
-   height: 60%;
+  height: 60%;
   margin-bottom: 3%;
   margin-top: 3%;
- 
 }
 
 section#cards div.card:hover {
@@ -357,7 +356,7 @@ div#btn-del a#yes:hover {
   font-weight: 700;
   border-radius: 4px;
   background-color: #ffdf00;
-  color: #009c3b ;
+  color: #009c3b;
   font-size: 1rem;
 }
 
@@ -493,9 +492,8 @@ div#btn-del a#yes:hover {
     justify-content: center;
     font-size: 0.8rem;
     padding: 0.3rem;
-    transition: all 0.2s ease-in-out;    
+    transition: all 0.2s ease-in-out;
     color: #009c3b;
-    
   }
 
   .dropdown-menu-content a:hover {
@@ -504,8 +502,7 @@ div#btn-del a#yes:hover {
   }
 }
 
-@media screen and (min-width:651px) and (max-width:900px) {
-  
+@media screen and (min-width: 651px) and (max-width: 900px) {
   .search input {
     width: 50%;
   }
@@ -513,18 +510,13 @@ div#btn-del a#yes:hover {
   .search label {
     width: 40%;
   }
-  .dropdown-menu-content{
+  .dropdown-menu-content {
     display: flex;
-    
   }
 
-  .dropdown-menu-content li{
+  .dropdown-menu-content li {
     display: flex;
     font-size: 1rem;
     margin-right: 20px;
-    
   }
-
-  
-
 }
